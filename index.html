@@ -1,21 +1,69 @@
 <!DOCTYPE html>
-<html lang="zh‑CN">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF‑8">
+    <meta charset="UTF-8">
     <title>网页图片超链接完整实验</title>
-    <!--实验要求link标签，仅语法演示，文件不存在也不报错-->
     <link href="mycss.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        .tip {
+            color: red;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .box img {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+        }
+
+        .text p {
+            font-size: 24px;
+            margin: 8px 0;
+        }
+
+        hr {
+            margin: 25px 0;
+        }
+
+        h3 {
+            font-size: 26px;
+        }
+
+        li {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
 
-    <!--醒目的红色加粗提示文字-->
-    <p style="color:red; font-size:24px; font-weight:bold;">
-        点击图片获得三国杀宝珠兑换码
-    </p>
 
-    <!--a包裹图片：整张图片点击跳转公安部反诈宣传网页，border="3"为图片添加边框-->
-    <a href="https://www.mps.gov.cn/n9182276/c9257177/content.html" target="_blank">
-        <img src="sgs_baozhu.jpg" border="3" alt="三国杀开盒图片">
-    </a>
+    <p class="tip">点击图片获得三国杀宝珠兑换码</p>
+
+    <div class="box">
+        <a href="https://www.mps.gov.cn/n9182276/c9257177/content.html" target="_blank">
+            <img src="sgs_baozhu.jpg" border="3" alt="三国杀开盒图片">
+        </a>
+
 </body>
 </html>
