@@ -2,56 +2,55 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>网页图片超链接完整实验</title>
+    <!-- 手机适配核心：视口设置，必须要有，否则手机显示错乱 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三国杀宝珠兑换码</title>
     <link href="mycss.css" rel="stylesheet" type="text/css" />
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 16px;
+            /*限制最大宽度，电脑不会拉的过宽*/
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
         h2 {
-            font-size: 28px;
+            font-size: 26px;
         }
-
         .tip {
             color: red;
             font-size: 28px;
             font-weight: bold;
         }
-
-        .box {
+        .content-wrap {
             display: flex;
-            flex-direction: column;
+            gap:20px;
             align-items: flex-start;
-            gap: 15px;
-            margin-top: 15px;
+            flex-wrap: wrap; /*空间不够自动换行，手机自动上下排列*/
         }
-
-        .box img {
-            width: 100%;
-            max-width: 420px;
+        .img-wrap img {
+            /*图片最大宽度，不会超过容器，height:auto保持图片比例不变形*/
+            max-width: 100%;
             height: auto;
         }
-
-        .text p {
-            font-size: 24px;
-            margin: 8px 0;
-        }
-
-        hr {
-            margin: 25px 0;
-        }
-
-        h3 {
-            font-size: 26px;
-        }
-
-        li {
+        .side-text p {
             font-size: 22px;
-            margin: 10px 0;
+            margin: 6px 0;
+        }
+        hr {
+            margin: 24px 0;
+        }
+        h3 {
+            font-size:24px;
+        }
+        li {
+            font-size: 20px;
+            margin: 8px 0;
         }
     </style>
 </head>
@@ -59,10 +58,11 @@
 
     <p class="tip">点击图片获得三国杀宝珠兑换码</p>
 
-    <div class="box">
-        <a href="https://www.mps.gov.cn/n9182276/c9257177/content.html" target="_blank">
-            <img src="sgs_baozhu.jpg" border="3" alt="三国杀开盒图片">
-        </a>
+    <div class="content-wrap">
+        <div class="img-wrap">
+            <a href="https://www.mps.gov.cn/n9182276/c9257177/content.html" target="_blank">
+                <img src="sgs_baozhu.jpg" border="3" alt="三国杀开盒图片">
+            </a>
 
 </body>
 </html>
